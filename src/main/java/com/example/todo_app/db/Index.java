@@ -1,6 +1,8 @@
 package com.example.todo_app.db;
 import com.example.todo_app.db.category.CreateCategory;
 import com.example.todo_app.db.todo.CreateTodo;
+import io.github.cdimascio.dotenv.Dotenv;
+import io.github.cdimascio.dotenv.DotenvBuilder;
 
 import java.sql.*;
 import java.util.List;
@@ -13,6 +15,7 @@ public class Index {
     }
 
     private static void connect() {
+
         try{
             Class.forName("org.postgresql.Driver");
             connection();
@@ -25,6 +28,8 @@ public class Index {
     }
 
     private static void connection() throws SQLException {
+
+
         connection = DriverManager.getConnection(
                 "jdbc:postgresql://localhost:5432/todo",
                 "postgres",

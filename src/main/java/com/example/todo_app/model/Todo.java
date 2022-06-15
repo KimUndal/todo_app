@@ -9,7 +9,11 @@ public class Todo {
     private String category;
     private Date createdAt;
 
-    public Todo(String task, boolean completed, String category, Date createdAt) {
+    public Todo() {
+    }
+
+    public Todo(int id, String task, boolean completed, String category, Date createdAt) {
+        this.id = id;
         this.task = task;
         this.completed = completed;
         this.category = category;
@@ -46,5 +50,24 @@ public class Todo {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Todo{" +
+                "id=" + id +
+                ", task='" + task + '\'' +
+                ", completed=" + completed +
+                ", category='" + category + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
     }
 }

@@ -5,9 +5,9 @@ import com.example.todo_app.model.Todo;
 import java.util.List;
 
 public interface TodoService {
-    boolean added();
-    boolean edited();
-    boolean deleted();
-    Todo getTodo();
+    boolean added(Todo todo);
+    boolean edited(Todo todo);
+    boolean deleted(int id);
+    Todo getTodo(Todo todo);
     List<Todo> getAllTodos();
 }

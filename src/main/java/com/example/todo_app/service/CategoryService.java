@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface CategoryService {
 
-    boolean added();
-    boolean edited();
-    boolean deleted();
-    Category getCategory();
+    boolean added(Category category);
+    boolean edited(Category category);
+    boolean deleted(int id);
+    Category getCategory(Category category);
     List<Category> getAllCategories();
 }

@@ -2,7 +2,7 @@ package com.example.todo_app.model;
 
 import java.util.Date;
 
-public class Todo {
+public class Todo implements Model{
     private int id;
     private String task;
     private boolean completed;

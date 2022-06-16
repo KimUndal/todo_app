@@ -2,12 +2,12 @@ package com.example.todo_app.model;
 
 import java.util.Date;
 
-public class Category {
+public class Category implements Model{
     private int id;
     private String categoryName;
-    private Date createdAt;
+    private java.sql.Date createdAt;
 
-    public Category(int id, String categoryName, Date createdAt) {
+    public Category(int id, String categoryName, java.sql.Date createdAt) {
         this.id = id;
         this.categoryName = categoryName;
         this.createdAt = createdAt;
@@ -29,11 +29,11 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public Date getCreatedAt() {
+    public java.sql.Date getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(java.sql.Date createdAt) {
         this.createdAt = createdAt;
     }
 

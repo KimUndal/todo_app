@@ -1,4 +1,5 @@
-package com.example.todo_app.db;
+package com.example.todo_app.db.connection;
+import com.example.todo_app.db.CreateTable;
 import com.example.todo_app.db.category.CreateCategory;
 import com.example.todo_app.db.todo.CreateTodo;
 import io.github.cdimascio.dotenv.Dotenv;
@@ -7,15 +8,11 @@ import io.github.cdimascio.dotenv.DotenvBuilder;
 import java.sql.*;
 import java.util.List;
 
-public class Index {
+public class Index{
     static Connection connection = null;
     static Statement statement = null;
-    public static void main(String[] args) {
-        connect();
-    }
 
-    private static void connect() {
-
+    public void connect() {
         try{
             Class.forName("org.postgresql.Driver");
             connection();
